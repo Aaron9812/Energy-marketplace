@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Offers{% endblock %}
+
+{% block content %}
+	<header>
+		<h1 class="title">Offers</h1>
+	</header>
+
+	<div class="table">
+		<table id="data" class="container">
+			<thead>
+				<tr>
+					<th>Owner</th>
+					<th>kWh-Token</th>
+					<th>Unitprice</th>
+					<th>Total price</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for offer in offers %}
+					<tr>
+						<td>{{ offer.owner }}</td>
+						<td>{{ offer.Amount_kWh }}</td>
+						<td>{{ offer.Unit_Price }} ETH</td>
+						<td>{{ offer.Total_Price }} ETH</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}

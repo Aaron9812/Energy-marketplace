@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0px;
+	padding-top: 0.2vh;
+}
+
+
+body
+{
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 65px;
+	border-color:white;
+	border-bottom: 2px solid white;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+button{
+	margin-left: 60px;
+	padding: 8px 25px;
+	background-color: rgba(0,136,169,0.8);
+	color:white;
+	border:none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	font-size: 20px;
+}
+
+
+button:hover{
+	background-color: white;
+	color: rgba(0,136,169,0.8);
+}
+
+.btn_login:hover{
+	background-color: white;
+	color: rgba(0,136,169,0.8);
+}
+
+li, a, button {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+input {
+	font-family: 'Roboto';
+	font-size: 20px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3vh;
+	margin-left:38%;
+	margin-top: 15px;
+	padding: 3px;
+	width: 400px;
+	border-radius: 10px;
+}
+
+.btn_login{
+	margin-left: 38%;
+	padding: 8px 25px;
+	background-color: rgba(0,136,169,0.8);
+	color:white;
+	border:none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	font-size: 20px;
+}
+
+.logo{
+	color: white;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-size: 26px;
+	margin-right: auto;
+	width: 50px;
+	padding-left: 80px;
+	padding-bottom: 0.2vh;
+}
+
+
+.nav__links{
+	display: flex;
+	justify-content: space-around;
+	width:50%;
+	padding-right: 80px;
+	padding-top: 15px;
+}
+
+
+.nav__links a{
+	color: white;
+	transition: all 0.3s ease 0s;
+}
+
+
+.nav__links button{
+	margin-top: -15px;
+	margin-bottom: 5px;
+}
+
+
+.nav__links li{
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+
+.nav__links li a{
+	transition: all 0.3s ease 0s
+}
+
+
+.nav__links li a:hover{
+	color: #0088a9
+}
+
+
+
+.title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5vh;
+	color: white;
+	font-family: 'Roboto';
+	font-size: 72px;
+}
+
+
+
+.subtitle{
+	margin-top: 10px;
+	margin-left: 75px;
+	color: white;
+	font-family: 'Roboto';
+	font-size: 22px;
+	font-weight: 400;
+}
+
+
+
+.btn_reg{
+	font-size: 20px;
+	margin-top: 20px;
+	margin-left: 75px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 13px;
+  width: 100%;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.msg{
+	font-size: 1.5em;
+	width: 25%;
+	text-align: center;
+	margin: auto;
+	margin-top: 3vh;
+	padding: 0.3em;
+	background-color: rgba(0,136,169,0.8);
+	color:white;
+	border:none;
+	border-radius: 50px;
+	transition: all 0.3s ease 0s;
+	font-size: 20px;
+}

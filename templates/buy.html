@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Check out{% endblock %}
+
+{% block content %}
+	<header>
+		<h1 class="title">Check out</h1>
+		<form method="POST">
+			<div class="msg">You currently have {{msg_kWh}} kWh Tokens</div>
+			<div class="msg">You currently have {{msg_eth}} Ether</div>
+			<table id="data" class="container">
+				<thead>
+					<tr>
+						<th>kWh-Token</th>
+						<th>Unitprice</th>
+						<th>Total price</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for offer in offers %}
+						<tr>
+							<td>{{ offer.Amount_kWh }}</td>
+							<td>{{ offer.Unit_Price }} ETH</td>
+							<td>{{ offer.Total_Price }} ETH</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<input class="btn_login" type="submit" value="Buy">
+		</form>
+	</header>
+{% endblock %}

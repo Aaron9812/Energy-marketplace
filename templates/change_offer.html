@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Change Offer{% endblock %}
+
+{% block content %}
+	<header>
+		<h1 class="title">Change Offer</h1>
+		<form method="POST">
+			<div class="msg">You currently have {{user_balance_kWh}} kWh Tokens</div>
+			{% for offer in offers %}
+				<div class="msg">The current unit price is {{ offer.Unit_Price }} kWh Tokens</div>
+				<div class="msg">You currently selling {{ offer.Amount_kWh }} kWh Tokens</div>
+				<p class="intro-text"><input id="price_per_unit" type="number" step="0.001" min="0" name="price_per_unit" placeholder="{{ offer.Unit_Price }}"></p>
+				<input class="btn_login" type="submit" value="Change Offer">
+			{% endfor %}
+			{% if msg is defined %}
+				<div class="msg">{{msg}}</div>
+			{% endif %}
+		</form>
+	</header>
+{% endblock %}

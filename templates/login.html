@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+	<header>
+		<h1 class="title">Login</h1>
+			<form action="{{url_for('login')}}" method="POST">
+				<p class="intro-text"><input id="address" type="text" name="address" placeholder="Address"></p>
+				<p class="intro-text"><input id="privat_key" type="password" name="privat_key" placeholder="Privat Key"></p>
+				<input class="btn_login" type="submit" value="Login">
+			</form>
+			{% if msg is defined %}
+				<div class="msg">{{msg}}</div>
+			{% endif %}
+	</header>
+{% endblock %}
+

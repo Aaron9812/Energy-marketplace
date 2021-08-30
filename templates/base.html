@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="static/table.css">
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}{% endblock %} - P2P Energy Marketplace</title>
+    {% endblock %}
+</head>
+<body>
+    <nav>
+		<div class="logo" OnClick="location.href='/'">
+			<h4>Contracts and Co</h4>
+		</div>
+
+		<ul class="nav__links">
+			<li>
+				<a href="/">Home</a>
+			</li>
+			<li>
+				<a href="offers">Offers</a>
+			</li>
+            {% if user_status %}
+                <li>
+                    <a href="/create_offer">Create Offer</a>
+                </li>
+                <li>
+                    <a href="/account">Account</a>
+                </li>
+                <a class="btn_an" href="logout"><button>Logout</button></a>
+            {% else %}
+                <a class="btn_an" href="login"><button>Login</button></a>
+            {% endif %}
+		</ul>
+	</nav>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div class="footer">
+        {% block footer %}
+        <p>© P2P Energy Marketplace 2021</p>
+        {% endblock %}
+    </div>
+</body>
+</html>

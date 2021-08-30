@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Offers{% endblock %}
+
+{% block content %}
+	<header>
+		<h1 class="title">Offers</h1>
+	</header>
+
+	<div class="table">
+		<table id="data" class="container loggedin">
+			<thead>
+				<tr>
+					<th class="owner">Owner</th>
+					<th>kWh-Token</th>
+					<th>Unitprice</th>
+					<th class="total_price">Total price</th>
+					<th>Buy</th>
+				</tr>
+			</thead>
+			<tbody>
+				<form action="{{url_for('offers')}}" method="POST"></form>
+				{% for offer in offers %}
+					<tr>
+						<td>{{ offer.owner }}</td>
+						<td>{{ offer.Amount_kWh }}</td>
+						<td>{{ offer.Unit_Price }} ETH</td>
+						<td>{{ offer.Total_Price }} ETH</td>
+						<td>
+							<form action="{{url_for('offers')}}" method="POST">
+								<button class="btn_buy" name="buy_btn" type="submit" value="buy/{{offer.id}}">buy</button>
+							</form>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}
