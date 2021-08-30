@@ -1,0 +1,1434 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/aaron/ontologies/2021/6/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/aaron/ontologies/2021/6/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:P2P_energy="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#belongs_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#belongs_to">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#lives_at"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#buys -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#buys">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#buys_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#buys_from">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#sells_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#collected_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#collected_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#collects"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Fees"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Taxes"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Government"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Network_provider"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#collects -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#collects">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Government"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Network_provider"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Fees"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Taxes"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#consumes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#consumes">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumption_Hardware"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_Hardware"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_Unit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_Unit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_balance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_balance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Account"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Price"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_buyer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_buyer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_close_date -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_close_date">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Trade"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_date_time_value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_contractual_party -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_contractual_party">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_open_date -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_open_date">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Trade"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_product -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_record -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_record"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_role -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_role">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_seller -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_seller">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#holds -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#holds">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_heled_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#identifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#identifies">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_identified_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_collected_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_collected_from">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Fees"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Taxes"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_heled_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_heled_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Account"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_identified_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_identified_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_index_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_index_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_owned_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_owned_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#ownes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hardware"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_payed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_payed_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_traded_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_traded_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#issued_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#issued_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Offer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#lives_at -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#lives_at">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#measures -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#measures"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#ownes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#ownes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Account"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hardware"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Production_Hardware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#sells -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#sells">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#sells_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#sells_to">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#trades -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#trades"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_Street -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_Street">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_balance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_balance">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_city -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_city">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_date_time_value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_date_time_value">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_percentage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_percentage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_transaction_details -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_transaction_details">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Transaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#kWh -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#kWh">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Account -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Account">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_record"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Record"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_identified_by"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_index_to"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_Street"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_city"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Tax_ID"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Account"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_name"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_identified_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Battery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Battery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_Hardware"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Electric_vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#buys"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#buys_from"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_role"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#ownes"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer_Hardware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#ownes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer_Hardware"/>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#lives_at"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Tax_ID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Government"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Network_provider"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer_Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer_Hardware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hardware"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer_Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumption_Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumption_Hardware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer_Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_buyer"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_product"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_seller"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Price"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_contractual_party"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Buyer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_contractual_party"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Electric_vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Electric_vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Price"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_traded_by"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Ether -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Ether">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Unit"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Fees -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Fees">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#collected_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Network_provider"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_collected_from"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Government -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Government">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#collects"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Taxes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hardware">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumption_Hardware"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Production_Hardware"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Smart_Meter"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_Hardware"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hydro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hydro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Production_Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#identifies"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Interaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Interaction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Network_provider -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Network_provider">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Offer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Offer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Interaction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#issued_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Price -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Price">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Price_request -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Price_request">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Interaction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#issued_by"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Production_Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Production_Hardware">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hydro"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Solar"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Wind"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer_Hardware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_owned_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#produces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Tax_ID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_role"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#ownes"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hardware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#lives_at"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer_Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer_Hardware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Record -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Record">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_close_date"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_open_date"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Seller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#sells"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Smart_Meter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Smart_Meter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer_Hardware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#measures"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_owned_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumer"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Solar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Solar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Production_Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_Hardware">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Battery"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Electric_vehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer_Hardware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#is_owned_by"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_capacity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_capacity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_capacity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Tax_ID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Tax_ID">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Taxes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Taxes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Unit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#has_date_time_value"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Trade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Trade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Interaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Transaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Transaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Interaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Wind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Wind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Production_Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Aaron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Aaron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Prosumer"/>
+        <P2P_energy:has rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Aaron_Address"/>
+        <P2P_energy:ownes rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Oven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Aaron_Address -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Aaron_Address">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+        <P2P_energy:has_Street xml:lang="en">Leinerstr</P2P_energy:has_Street>
+        <P2P_energy:has_city xml:lang="en">Konstanz</P2P_energy:has_city>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Battery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Battery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Battery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract_Aaron_Max -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract_Aaron_Max">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract"/>
+        <P2P_energy:has_buyer rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max"/>
+        <P2P_energy:has_seller rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Aaron"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#EnBW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#EnBW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Network_provider"/>
+        <P2P_energy:collects rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#network_fee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#EnBW_Address -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#EnBW_Address">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+        <P2P_energy:belongs_to rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#EnBW"/>
+        <P2P_energy:has_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karlsruhe</P2P_energy:has_city>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Fridge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Fridge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumption_Hardware"/>
+        <P2P_energy:is_owned_by rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Aaron"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Government"/>
+        <P2P_energy:collects rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Sales_tax"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Mark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Mark">
+        <P2P_energy:has rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Aaron_Address"/>
+        <P2P_energy:sells rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#50_kWh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max">
+        <P2P_energy:buys rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#50_kWh"/>
+        <P2P_energy:lives_at rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max_Address"/>
+        <P2P_energy:ownes rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Battery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max_Address -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max_Address">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Address_postal"/>
+        <P2P_energy:has_Street>Alfred-Wachtel-Straße 8</P2P_energy:has_Street>
+        <P2P_energy:has_city>Konstanz</P2P_energy:has_city>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max_account -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max_account">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Account"/>
+        <P2P_energy:is_heled_by rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max"/>
+        <P2P_energy:has_balance rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</P2P_energy:has_balance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Oven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Oven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumption_Hardware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Sales_tax -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Sales_tax">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Taxes"/>
+        <P2P_energy:is_collected_from rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max"/>
+        <P2P_energy:has_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.19</P2P_energy:has_percentage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#network_fee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#network_fee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Fees"/>
+        <P2P_energy:collected_by rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#EnBW"/>
+        <P2P_energy:is_collected_from rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Max"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#50_kWh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#50_kWh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Energy_value"/>
+        <P2P_energy:kWh rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</P2P_energy:kWh>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Account"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Unit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Agent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hardware"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Information"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Interaction"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Consumption_Hardware"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Production_Hardware"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Smart_Meter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Storage_Hardware"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Contract"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Identifier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Unit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Value"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Hydro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Solar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Wind"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Offer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Price_request"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aaron/ontologies/2021/6/P2P_energy#Trade"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
